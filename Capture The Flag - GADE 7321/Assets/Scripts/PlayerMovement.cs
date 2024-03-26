@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     {
        characterController = GetComponent<CharacterController>();
         rb = GetComponent<Rigidbody>();
+
+
     }
 
     
@@ -35,4 +37,6 @@ public class PlayerMovement : MonoBehaviour
             Destroy(blueFlag);
         }
     }
+
+    
 }
