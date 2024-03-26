@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 public class FSM : MonoBehaviour
 {
+    public GameObject player;
+    public GameObject playerStartingLocation;
     public GameObject flagLocationObject;
     public GameObject startingLocationObject;
     public GameObject redFlag;
+    public GameObject blueFlag;
     public NavMeshAgent agent;
     private AIState currentState;
     private Vector3 flagLocation;
@@ -85,8 +89,17 @@ public class FSM : MonoBehaviour
     private void MoveToStartingLocation()
     {
         agent.SetDestination(startingLocationObject.transform.position);
+        if (redFlag == null && agent.destination == startingLocationObject.transform.position)
+        {
+            SceneManager.LoadScene("Main");
+        }
+
+        if (blueFlag == null && player.transform.position == playerStartingLocation.transform.position )
+        {
+            SceneManager.LoadScene("Main");
+        }
 
 
-        
+
     }
 }

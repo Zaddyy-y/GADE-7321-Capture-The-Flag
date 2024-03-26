@@ -1135,6 +1135,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &620371581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 620371582}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &620371582
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620371581}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.015832476, z: -0, w: -0.9998747}
+  m_LocalPosition: {x: -12.75, y: 7.04, z: 19.78}
+  m_LocalScale: {x: 0.5492201, y: 0.54922, z: 0.5492201}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &630921099
 GameObject:
   m_ObjectHideFlags: 0
@@ -2136,7 +2167,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1151748815}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.34042525, y: 0.0000000228801, z: -0.000000008283737, w: 0.9402716}
+  m_LocalRotation: {x: 0.34042525, y: -0.00000002288009, z: 0.000000008283735, w: 0.9402716}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2745,7 +2776,7 @@ Transform:
   m_GameObject: {fileID: 1770139435}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.662, y: 7.27, z: -18.92}
+  m_LocalPosition: {x: -12.61, y: 7.27, z: -18.92}
   m_LocalScale: {x: 0.54922, y: 0.54922, z: 0.54922}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3084,9 +3115,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1c5f73863a5636468f2c66f04608878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1967139305}
+  playerStartingLocation: {fileID: 620371581}
   flagLocationObject: {fileID: 1456362872}
   startingLocationObject: {fileID: 1770139435}
   redFlag: {fileID: 1709597287}
+  blueFlag: {fileID: 6190746}
   agent: {fileID: 1844530819}
 --- !u!54 &1844530818
 Rigidbody:
@@ -3783,3 +3817,4 @@ SceneRoots:
   - {fileID: 1178987781}
   - {fileID: 1718247044}
   - {fileID: 570792699}
+  - {fileID: 620371582}
