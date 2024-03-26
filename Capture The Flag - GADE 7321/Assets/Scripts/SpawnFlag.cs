@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class SpawnFlag : MonoBehaviour
 {
+    //VARIABLES
     public GameObject spawnFlag;
     public Vector3 spawnPoint;
 
     void Start()
     {
         spawnPoint = transform.position;
-        Instantiate(spawnFlag, spawnPoint, Quaternion.identity);
+        Instantiate(spawnFlag, spawnPoint, Quaternion.identity); //SPAWNS FLAGS AT THEIR RESPECTIVE POSITIONS
     }
 
     

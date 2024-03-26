@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    //VARIABLES
     public float playerSpeed = 10f;
     public CharacterController characterController;
     public Rigidbody rb;
@@ -22,14 +23,14 @@ public class PlayerMovement : MonoBehaviour
     
     void Update()
     {
-       playerVelocity = Camera.main.transform.forward * Input.GetAxis("Vertical") +
+       playerVelocity = Camera.main.transform.forward * Input.GetAxis("Vertical") + //ALLOWS THE PLAYER TO MOVE IN EITHER DIRECTION RELATIVE TO THE CAMERAS POSITION
                       Camera.main.transform.right * Input.GetAxis("Horizontal");
 
-       characterController.SimpleMove(playerVelocity * playerSpeed);
+       characterController.SimpleMove(playerVelocity * playerSpeed); // DETERMINES THE DIRECTION AND SPEED OF THE PLAYER CHARACTER'S MOVEMENT USING THE SIMPLE MOVE METHOD
   
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other) // ALLOWS THE PLAYER TO PICK UP THE BLUE FLAG IF THE TAG MATCHES
     {
         if (other.CompareTag("Blue Flag"))
         {
